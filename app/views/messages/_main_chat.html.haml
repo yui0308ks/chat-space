@@ -1,4 +1,4 @@
-%div.main_chat
+.main_chat
   .main_chat__group-info
     .main_chat__left-box
       %h1 test
@@ -24,10 +24,10 @@
 
   .main_chat__message-info
     %div.input-box
-      %input#message_content.input-box__text{:placeholder => "type a message"}/
+      %input#message_content.input-box__text{placeholder: "type a message"}/
       %label.input-box__image
         %i.fa.fa-image
-        %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+        %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
 
     .main_chat__btn
       =link_to "#", class: "main_chat__send" do
