@@ -1,11 +1,7 @@
 $btn_color: #38aef0;
 
 .main_chat {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 300px;
+  float: right;
   &__group-info{
     height: 100px;
     width: calc(100vw - 300px);
@@ -13,22 +9,18 @@ $btn_color: #38aef0;
     border-bottom-color: #eeeeee
   }
 
-
-&__left-box {
+&__left-box1 {
   padding-left: 40px;
+  font-size: 20px;
+  color: #333333;
+  padding-top: 35px;
+  padding-bottom: 15px;
 }
 
-  & h1 {
-    font-size: 20px;
-    color: #333333;
-    padding-top: 35px;
-    float: left;
-  }
-
-  & h2 {
+&__left-box2 {
     font-size: 12px;
     color: #999999;
-    padding-top: 82px;
+    padding-left: 40px;
   }
 
 &__edit {
@@ -51,59 +43,82 @@ $btn_color: #38aef0;
   width: calc(100vw - 300px -40px);
   background-color: #fafafa;
   padding-left: 40px;
-}
-
-&__message-info {
-  height: 90px;
-  background-color: #d2d2d2;
-  display: flex;
-  align-items: center;
-}
-
-&__message-id1 {
-  padding-top: 5px;
+  overflow: scroll;
 }
 
 &__message-up-info {
   // height: 35px;
-  padding-top: 30px;
+  margin-top: 30px;
   // p {float: left;}
-  display: flex;
+  margin-bottom: 10px;
 }
 
 &__up_user {
   font-size: 16px;
   color: #333333;
+  padding-top: 35px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
 }
 
 &__up_data {
   font-size: 12px;
   color: #999999;
-  margin-left: 12px;
+  padding-top: 35px;
+  display: inline-block;
 }
 
-&__up-content {
+p {
   font-size: 14px;
   color: #434A54;
   padding-top:12px;
   margin-bottom: 11px;
-  }
+}
 
-.input-box {
-  padding: 0 40px 0 10px;
+.form {
+  height: 90px;
+  width: calc(100vw - 300px);
+  background-color: #d2d2d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  height: 50px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.input-box__text {
+  height: 50px;
+  width: 100%;
+  border-style: none;
+  // padding-right: 150px;
+  margin-left: 40px;
+  padding-left: 10px;
+}
+
+.input-box__image__file {
   position: relative;
-  &__text {
-    height: 50px;
-    width: 100%;
-    padding: 0 40px 0 10px;
-    border-style: none;
-  }
-  &__image {
-    position: absolute;
-    top: 15px;
-    right: 70px;
-  }
+}
+
+.icon {
+  position: absolute;
+  right: 20px;
+  top: 15px
+  
+}
+
+
+
+.input-box__image {
+  width:30px;
+
+
 }
 
 &__btn {
@@ -111,19 +126,22 @@ $btn_color: #38aef0;
   width: 100px;
   padding: 0 30px;
   margin-right: 10px;
+  color: #ffffff;
+  float: right;
   background-color: $btn_color;
   border: 1px solid $btn_color;
+  display: block;
+  text-align: center;
+  margin-left: 10px;
 }
 
 &__send {
   font-size: 16px;
-  color: #ffffff;
   text-decoration: none;
-  float: right;
-  display: block;
   text-align: center;
   line-height: 50px;
-  padding-left: 40px;
+  padding-right: 40px;
+  float: right;
 }
 
 label input {
